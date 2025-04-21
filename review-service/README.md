@@ -18,7 +18,7 @@ This Go-based microservice pulls `.jl` review files from AWS S3, validates/parse
 ## 🛠️ Setup
 
 ```bash
-git clone https://github.com/your-org/review-service
+git clone git@github.com:Parmeshwartak/ZUZUAssignment.git
 cd review-service
 cp .env.example .env
 
