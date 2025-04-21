@@ -12,7 +12,7 @@ This Go-based microservice pulls `.jl` review files from AWS S3, validates/parse
 
 ## ✅ Architechture diagram
 ┌────────────┐     ┌──────────────┐      ┌───────────────┐
-│   AWS S3   │ ──▶ │ Review Loader│ ──▶  │ PostgreSQL DB │
+│   AWS S3   │ ──▶│ Review Loader│ ──▶ │ PostgreSQL DB │
 │ .jl Files  │     │ Microservice │      │   (Relational)│
 └────────────┘     └──────────────┘      └───────────────┘
                          ▲
