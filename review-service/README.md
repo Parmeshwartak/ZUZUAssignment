@@ -10,6 +10,18 @@ This Go-based microservice pulls `.jl` review files from AWS S3, validates/parse
 - Dockerized for deployment
 - Cron-compatible
 
+## ✅ Architechture diagram
+┌────────────┐     ┌──────────────┐      ┌───────────────┐
+│   AWS S3   │ ──▶ │ Review Loader│ ──▶  │ PostgreSQL DB │
+│ .jl Files  │     │ Microservice │      │   (Relational)│
+└────────────┘     └──────────────┘      └───────────────┘
+                         ▲
+                         │
+                 ┌────────────┐
+                 │Scheduler / │
+                 │  Cron Job  │
+                 └────────────┘
+
 ## 🔧 Requirements
 - Go 1.20+
 - Docker
