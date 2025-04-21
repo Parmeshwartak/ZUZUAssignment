@@ -20,5 +20,12 @@ This Go-based microservice pulls `.jl` review files from AWS S3, validates/parse
 ```bash
 git clone git@github.com:Parmeshwartak/ZUZUAssignment.git
 cd review-service
-cp .env.example .env
+cp .env
+
+### **build and run the repo **
+docker build -t review-service .
+docker run --network=host --env-file .env review-service
+for postgres==>
+docker run --name my-postgres   -e POSTGRES_USER=postgres   -e POSTGRES_PASSWORD=password   -e POSTGRES_DB=reviews   -p 5432:5432  -d postgres
+
 
